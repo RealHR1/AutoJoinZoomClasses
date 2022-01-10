@@ -31,6 +31,7 @@ Example for correct time format:
 NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
 **Changelog:**
+
 **v1.1:**
  - Fixed issue: HTTP GET request not being sent sometimes.
  - Added support for different schedules for different days of the week.
