@@ -30,11 +30,11 @@ Example for correct time format:
 
 NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
-Changelog:
-v1.1:
+**Changelog:**
+**v1.1:**
  - Fixed issue: HTTP GET request not being sent sometimes.
  - Added support for different schedules for different days of the week.
  - Added support for knowing if the meeting has started or not via http get and console.
 
-v1.2:
+**v1.2:**
  - Added support for discord server webhooks to get bot notifications.
