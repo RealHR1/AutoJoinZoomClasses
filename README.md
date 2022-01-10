@@ -1,4 +1,4 @@
-Zoom Auto Class Join Bot v1.1
+**Zoom Auto Class Join Bot v1.1**
 
 To run this bot, you need these python libraries:
 os
