@@ -40,7 +40,7 @@ while True:
             print(class_name + " class joined and class " + "has not" + " started")
             requests.get(http_get_url + "?value1=Bot has joined " + class_name + " class." + "&value2=Class has not started.")
 
-            webhook.add_embed(DiscordEmbed(title='School', description='Bot has joined' + class_name + 'class. \nClass has not started.', color='ff007b'))
+            webhook.add_embed(DiscordEmbed(title='School', description='Bot has joined ' + class_name + ' class. \nClass has not started.', color='ff007b'))
             webhook.execute()
             subprocess.Popen("meetingstart.py" + " " + http_get_url + " " + discord_webhook_url + " " + str(checkdelay) + " " + class_name, shell=True)
         else:
