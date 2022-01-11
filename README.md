@@ -1,13 +1,8 @@
-**Zoom Auto Class Join Bot v1.2**
+Zoom Auto Class Join Bot v1.2
 
-To run this bot, you need these python libraries:
-os
-requests
-time
-pandas
-datetime
-subprocess
-sys
+To run this bot, you need libraries listed in requirements.txt
+
+Note: Make sure zoom is running before starting this program.
 
 This works on windows only. You may be able to modify the code and get it to work on linux but I have not tried it.
 
@@ -30,12 +25,11 @@ Example for correct time format:
 
 NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
-**Changelog:**
-
-**v1.1:**
+Changelog:
+v1.1:
  - Fixed issue: HTTP GET request not being sent sometimes.
  - Added support for different schedules for different days of the week.
  - Added support for knowing if the meeting has started or not via http get and console.
 
-**v1.2:**
+v1.2:
  - Added support for discord server webhooks to get bot notifications.
