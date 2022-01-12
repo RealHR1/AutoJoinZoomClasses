@@ -1,4 +1,4 @@
-Zoom Auto Class Join Bot v1.21
+# Zoom Auto Class Join Bot v1.21
 
 To run this bot, you need libraries listed in requirements.txt
 
@@ -26,7 +26,7 @@ Example for correct time format:
 
 NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
-**Changelog:**
+# Changelog
 
 **v1.1:**
  - Fixed issue: HTTP GET request not being sent sometimes.
