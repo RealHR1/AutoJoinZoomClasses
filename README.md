@@ -1,4 +1,4 @@
-Zoom Auto Class Join Bot v1.2
+Zoom Auto Class Join Bot v1.21
 
 To run this bot, you need libraries listed in requirements.txt
 
@@ -8,9 +8,9 @@ This works on windows only. You may be able to modify the code and get it to wor
 
 http_get_url in main.py is the variable used to keep the url to the webhook link which you get from ifttt. To disable IFTTT alert functionality, comment out Lines 41, 48 and set http_get_url to "NA in main.py and comment out Line 18 in meetingstart.py
 
-discord_webhook_url in main.py is the variable used to keep the url to the webhook link which you can get from discord. To disable discord server webhook send alert functionality, comment out Lines: 44, 51 and set discord_webhook_url to "NA" in main.py and comment out Line 21 in meetingstart.py
+http_get_url in main.py is the variable used to keep the url to the webhook link which you get from ifttt. To disable IFTTT alert functionality, comment out Lines 41, 52, 59 and set http_get_url to "NA" in main.py
 
-post_join_timeout in main.py is the time (in seconds) the bot will wait before re-running itself. Note that I recommend keeping it at 60 seconds minimum or else you could have the bot trying to rejoin the same meeting multiple times.
+discord_webhook_url in main.py is the variable used to keep the url to the webhook link which you can get from discord. To disable discord server webhook send alert functionality, comment out Lines: 44, 55, 62 and set discord_webhook_url to "NA" in main.py
 
 Code_rerun_timeout in main.py is the time(in seconds) the bot waits before re-running the script in the event that the bot does not find any meetings to join for the current time. I recommend a Code_rerun_timeout of atleast 5. Making it very low could cause high CPU utilization.
 
@@ -18,10 +18,11 @@ startquery variable is how much time(in seconds) does the bot wait before it che
 
 checkdelay is how much time(in seconds) does the bot wait between each of its checks on whether meeting is started or not after the initial check.
 
-To edit the timings and names of your classes, you will find .csv files with days of the weeks as their names. Just open those and put in the schedule for the days corresponding to their names. Keep in mind that time has to be in dd:mm format and 24 hour format. Any other time format can cause that entry in the schedule to be ignored completely by the program. 
+To edit the timings and names of your classes, you will find .csv files with days of the weeks as their names. Just open those and put in the schedule for the days corresponding to their names. Keep in mind that time has to be in dd:mm format and 24 hour format. Any other time format can cause that entry in the schedule to be ignored completely by the program. Also make sure that your computer's time is accurate and set to your local time. Wrong computer time can cause the program to not function correctly.
+
 Example for correct time format:
-    07:15 - 7:15 AM
-    14:30 - 2:30 PM
+    7:15 AM - 07:15
+    2:30 PM - 14:30
 
 NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
@@ -34,3 +35,6 @@ NOTE: NAMES OF YOUR CLASSES CANT HAVE ANY SPACES IN BETWEEN WORDS
 
 **v1.2:**
  - Added support for discord server webhooks to get bot notifications.
+
+**v1.21:**
+ - Merged meetingstart.py and main.py
