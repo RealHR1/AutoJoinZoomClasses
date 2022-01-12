@@ -39,14 +39,25 @@ while True:
         if "Zoom.exe" in tasklist_output:
             print(class_name + " class joined and class " + "has not" + " started")
             requests.get(http_get_url + "?value1=Bot has joined " + class_name + " class." + "&value2=Class has not started.")
-
+            webhook.remove_embeds()
             webhook.add_embed(DiscordEmbed(title='School', description='Bot has joined ' + class_name + ' class. \nClass has not started.', color='ff007b'))
             webhook.execute()
-            subprocess.Popen("meetingstart.py" + " " + http_get_url + " " + discord_webhook_url + " " + str(checkdelay) + " " + class_name, shell=True)
+            while True:
+                tasklist_output = str(subprocess.check_output('TASKLIST /FI "WINDOWTITLE eq Waiting For Host"', shell=True))
+                if "Zoom.exe" in tasklist_output:
+                    time.sleep(checkdelay)
+                else:
+                    print("Meeting Started")
+                    class_name = str(class_name)
+                    requests.get(http_get_url + "?value2=" + class_name + " Class has started.")
+                    webhook.remove_embeds()
+                    webhook.add_embed(DiscordEmbed(title='School', description=class_name+' class has started. \nBot is already in class.', color='ff007b'))
+                    webhook.execute()
+                    break
         else:
             print(class_name + " class joined and class " + "has" + " started")
             requests.get(http_get_url + "?value1=Bot has joined " + class_name + " class." + "&value2=Class has started.")
-
+            webhook.remove_embeds()
             webhook.add_embed(DiscordEmbed(title='School', description='Bot has joined ' + class_name + ' class. \nClass has started.', color='ff007b'))
             webhook.execute()
 
